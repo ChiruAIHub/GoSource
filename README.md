@@ -1,6 +1,6 @@
-# GitLaunch: Unified Open-Source AI Repository & Contribution Hub
+# GoSource: Unified Open-Source AI Repository & Contribution Hub
 
-> **Hacktoberfest Hack Day 2026 @ Newton School of Technology (SMRU × MLH)**  
+> **Newton School of Technology (SMRU × MLH)**  
 > **Track 1:** Best Open-Source / Open-Weight AI Product  
 > **Problem Statement #20:** Open-Source Contribution Finder  
 > **Core AI Engine:** OpenCode Nemotron 3.5 Super VL 120B (Open-Weight, Zero Cloud Quota Burn)  
@@ -11,13 +11,12 @@
 
 ## 🌐 Live Access & Deployment
 - 🚀 **Main Website (Live Demo):** [https://right-midnight-ate-defense.trycloudflare.com](https://right-midnight-ate-defense.trycloudflare.com)
-- 💻 **Local Development Frontend:** [http://localhost:5173](http://localhost:5173)
-- 📚 **Interactive Swagger API Docs:** [https://right-midnight-ate-defense.trycloudflare.com/docs](https://right-midnight-ate-defense.trycloudflare.com/docs) (or local: `http://localhost:8000/docs`)
+- 📚 **Interactive Swagger API Docs:** [https://right-midnight-ate-defense.trycloudflare.com/docs](https://right-midnight-ate-defense.trycloudflare.com/docs)
 
 ---
 
 ## 🌟 The Core Vision
-GitLaunch brings together repositories and beginner-friendly contribution opportunities from across the entire open-source AI ecosystem (**GitHub, Hugging Face Hub, Ollama Library, ModelScope, Kaggle, etc.**) into one unified dashboard.
+GoSource brings together repositories and beginner-friendly contribution opportunities from across the entire open-source AI ecosystem (**GitHub, Hugging Face Hub, Ollama Library, ModelScope, Kaggle, etc.**) into one unified dashboard.
 
 Every repository and issue card prominently displays:
 1. **Source Platform Badge**: (`[GitHub]`, `[Hugging Face]`, `[Ollama Library]`, etc.)
@@ -27,10 +26,9 @@ Every repository and issue card prominently displays:
 
 ---
 
-## 🔌 API Endpoints for Frontend Teammates
+## 🔌 API Endpoints
 
-Backend is running live at: `http://localhost:8000` (or through the live tunnel)  
-Interactive Swagger Docs: `http://localhost:8000/docs`
+Interactive Swagger Docs: [https://right-midnight-ate-defense.trycloudflare.com/docs](https://right-midnight-ate-defense.trycloudflare.com/docs)
 
 ### 1. `GET /api/repos` (All Aggregated Repositories in One Place)
 Returns all open-source repositories brought together from the different websites with their fetch link and direct redirect link.
@@ -56,7 +54,7 @@ Returns all open-source repositories brought together from the different website
 ```
 
 ### 2. `GET /api/redirect/{item_id}` (Direct Browser Redirection)
-Directly issues an `HTTP 307 Redirect` to take the user from GitLaunch straight to the original open-source site.
+Directly issues an `HTTP 307 Redirect` to take the user from GoSource straight to the original open-source site.
 - **Example**: `https://right-midnight-ate-defense.trycloudflare.com/api/redirect/iss-101` redirects directly to `https://github.com/BerriAI/litellm/issues/4512`.
 
 ### 3. `POST /api/issues/match` (Smart Contributor Matching)
@@ -83,22 +81,16 @@ Returns complete category directory (Model Hubs, Inference APIs, Frameworks, Cre
 
 ---
 
-## 💾 Hard Drive D: Sync System
-- All project files and snapshots are backed up to: `D:\Hacktoberfest2026_GitLaunch\`
-- To pull the latest code on any laptop: run `PULL_LATEST_PROJECT_TO_MY_LAPTOP.bat` directly from Drive D:.
+## ⚖️ Open-Source Licensing & Compliance Declaration
 
----
-
-## ⚖️ Open-Source Licensing & Hackathon Compliance Declaration
-
-> Built for **Hacktoberfest Hack Day 2026 @ Newton School of Technology (SMRU × MLH)**  
+> Built for **Newton School of Technology (SMRU × MLH)**  
 > **Track 1:** Best Open-Source / Open-Weight AI Product  
 > **Problem Statement #20:** Open-Source Contribution Finder  
 
-This project implements a verified **Two-Layer Open-Source Architecture** in full compliance with the official Hack Day evaluation rules:
+This project implements a verified **Two-Layer Open-Source Architecture** in full compliance with official evaluation rules:
 
 ### 1. Software & Platform Layer
-* **Project Codebase:** [GitLaunch / GoSource Platform](https://github.com/ChiruAIHub/GoSource)
+* **Project Codebase:** [GoSource Platform](https://github.com/ChiruAIHub/GoSource)
 * **Software License:** [MIT License](LICENSE) (OSI-Approved, Permissive Open-Source)
 * **Scope:** Covers all frontend React/Vite interfaces, FastAPI backend endpoints, crawler adapters, and caching services.
 
@@ -109,7 +101,7 @@ This project implements a verified **Two-Layer Open-Source Architecture** in ful
 * **Source & Provenance:** [Hugging Face Hub Model Repository](https://huggingface.co/models) / [Ollama Library](https://ollama.com/library)
 
 ### 3. Upstream Provider Attribution
-All aggregated repository, issue, and dataset metadata displayed in GitLaunch originates from official open APIs:
+All aggregated repository, issue, and dataset metadata displayed in GoSource originates from official open APIs:
 * **GitHub REST API v3:** [https://docs.github.com/en/rest](https://docs.github.com/en/rest) (MIT / Open API Guidelines)
 * **Hugging Face Hub API:** [https://huggingface.co/docs/hub/api](https://huggingface.co/docs/hub/api) (Apache-2.0 Client)
 * **Kaggle Public API:** [https://www.kaggle.com/docs/api](https://www.kaggle.com/docs/api) (Open Data Commons)
