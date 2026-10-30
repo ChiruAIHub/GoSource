@@ -3,7 +3,16 @@
 > **Hacktoberfest Hack Day 2026 @ Newton School of Technology (SMRU × MLH)**  
 > **Track 1:** Best Open-Source / Open-Weight AI Product  
 > **Problem Statement #20:** Open-Source Contribution Finder  
-> **Core AI Engine:** OpenCode Nemotron 3.5 Super VL 120B (Open-Weight, Zero Cloud Quota Burn)
+> **Core AI Engine:** OpenCode Nemotron 3.5 Super VL 120B (Open-Weight, Zero Cloud Quota Burn)  
+> **Live Website:** [https://right-midnight-ate-defense.trycloudflare.com](https://right-midnight-ate-defense.trycloudflare.com)  
+> **GitHub Repository:** [https://github.com/ChiruAIHub/GoSource](https://github.com/ChiruAIHub/GoSource)
+
+---
+
+## 🌐 Live Access & Deployment
+- 🚀 **Main Website (Live Demo):** [https://right-midnight-ate-defense.trycloudflare.com](https://right-midnight-ate-defense.trycloudflare.com)
+- 💻 **Local Development Frontend:** [http://localhost:5173](http://localhost:5173)
+- 📚 **Interactive Swagger API Docs:** [https://right-midnight-ate-defense.trycloudflare.com/docs](https://right-midnight-ate-defense.trycloudflare.com/docs) (or local: `http://localhost:8000/docs`)
 
 ---
 
@@ -20,7 +29,7 @@ Every repository and issue card prominently displays:
 
 ## 🔌 API Endpoints for Frontend Teammates
 
-Backend is running live at: `http://localhost:8000`  
+Backend is running live at: `http://localhost:8000` (or through the live tunnel)  
 Interactive Swagger Docs: `http://localhost:8000/docs`
 
 ### 1. `GET /api/repos` (All Aggregated Repositories in One Place)
@@ -48,7 +57,7 @@ Returns all open-source repositories brought together from the different website
 
 ### 2. `GET /api/redirect/{item_id}` (Direct Browser Redirection)
 Directly issues an `HTTP 307 Redirect` to take the user from GitLaunch straight to the original open-source site.
-- **Example**: `http://localhost:8000/api/redirect/iss-101` redirects directly to `https://github.com/BerriAI/litellm/issues/4512`.
+- **Example**: `https://right-midnight-ate-defense.trycloudflare.com/api/redirect/iss-101` redirects directly to `https://github.com/BerriAI/litellm/issues/4512`.
 
 ### 3. `POST /api/issues/match` (Smart Contributor Matching)
 - **Request Body**:

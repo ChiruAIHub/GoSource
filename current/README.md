@@ -3,6 +3,7 @@
 > **Hacktoberfest Hack Day 2026 @ Newton School of Technology (SMRU × MLH)**  
 > **Track 1:** Best Open-Source / Open-Weight AI Product  
 > **Problem Statement #20:** Open-Source Contribution Finder  
+> **Live Website:** https://right-midnight-ate-defense.trycloudflare.com
 > **License:** MIT License  
 > **Core AI Models:** OpenCode Nemotron 3.5 Super VL 120B / DeepSeek
 

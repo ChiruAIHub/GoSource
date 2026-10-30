@@ -2,7 +2,7 @@
 
 > **Hackathon Problem Statement 20**: Open Source Finder  
 > **Team / Creator**: ChiruAIHub  
-> **Live Demo URL**: [http://localhost:5173](http://localhost:5173)  
+> **Live Demo URL**: [https://right-midnight-ate-defense.trycloudflare.com](https://right-midnight-ate-defense.trycloudflare.com) (Local: http://localhost:5173)  
 > **GitHub Repository**: [https://github.com/ChiruAIHub/GoSource](https://github.com/ChiruAIHub/GoSource)
 
 ---
@@ -82,7 +82,7 @@ GoSource features a resilient API service layer located at `src/services/apiClie
 ```bash
 python server.py
 ```
-*Open [http://localhost:5173](http://localhost:5173) in your browser.*
+*Open [https://right-midnight-ate-defense.trycloudflare.com](https://right-midnight-ate-defense.trycloudflare.com) (Local: http://localhost:5173) in your browser.*
 
 ### Option 2: Run Development Server (with Hot Reloading)
 ```bash
