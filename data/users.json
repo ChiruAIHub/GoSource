@@ -1,0 +1,83 @@
+{
+  "users": [
+    {
+      "id": "usr_default_contributor",
+      "username": "Contributor",
+      "display_name": "Open-Source Contributor",
+      "email": "contributor@gosource.dev",
+      "password_hash": "05396c0eb06c2cadab356a814faf9b82:f5ba5e0a2908d333f307cf89ee496c7a693625079d09b064b3eb838aeeb54642",
+      "avatar_initials": "OS",
+      "tier": "Tier 1 Contributor",
+      "bio": "Open-Source Contributor & AI Explorer across GitHub, Hugging Face, and Kaggle",
+      "platforms": {
+        "github": {
+          "username": "contributor",
+          "profile_url": "https://github.com",
+          "top_repos": [
+            "king",
+            "-Nexus-AI",
+            "hindsight",
+            "rocketride-server"
+          ],
+          "verified": true
+        },
+        "huggingface": {
+          "username": "contributor",
+          "profile_url": "https://huggingface.co",
+          "verified": true
+        },
+        "kaggle": {
+          "username": "contributor",
+          "profile_url": "https://www.kaggle.com",
+          "verified": true,
+          "notebooks_count": 3
+        }
+      },
+      "skills": [
+        "Python",
+        "React",
+        "TypeScript",
+        "FastAPI",
+        "PyTorch"
+      ],
+      "bookmarked_repos": [
+        "repo-1",
+        "repo-5"
+      ],
+      "bookmarked_issues": [
+        "iss-101"
+      ],
+      "created_at": "2026-10-30T22:51:41Z"
+    },
+    {
+      "id": "usr_1793400701_d8682fe8",
+      "username": "arvindgamer950",
+      "display_name": "arvindgamer950",
+      "email": "arvindgamer950@gmail.com",
+      "password_hash": "5db99cb4f02de491d2fb49ace30915a5:e737edd609a2ab6048a274f0a73bbdc5c7bf65f4bbdb53085a515c0cd4133d48",
+      "avatar_initials": "AR",
+      "tier": "Tier 1 Contributor",
+      "bio": "Open-Source Contributor (arvindgamer950@gmail.com)",
+      "platforms": {
+        "github": {
+          "username": "arvindgamer950",
+          "profile_url": "https://github.com/arvindgamer950",
+          "verified": true
+        }
+      },
+      "skills": [
+        "Python",
+        "FastAPI",
+        "React"
+      ],
+      "bookmarked_repos": [
+        "repo-1",
+        "repo-5"
+      ],
+      "bookmarked_issues": [
+        "issue-1"
+      ],
+      "created_at": "2026-10-30T22:51:41Z"
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "users": [
+    {
+      "id": "usr_chiru_default",
+      "username": "ChiruAIHub",
+      "display_name": "Chiru Hasini Lakshmi Pallampati",
+      "email": "chiru@gitlaunch.ai",
+      "password_hash": "ba258ac738d45318d9d534da1e317e3c:f755d3ed1517a28c56e16b8e2df633e2f5eb23adb2755005c42e0a832797d7d8",
+      "avatar_initials": "CP",
+      "tier": "Tier 2 Contributor",
+      "bio": "AI & Open-Source Researcher \u2022 Active across GitHub, Hugging Face Hub & Kaggle Ecosystems",
+      "platforms": {
+        "github": {
+          "username": "ChiruAIHub",
+          "profile_url": "https://github.com/ChiruAIHub",
+          "top_repos": [
+            "king",
+            "-Nexus-AI",
+            "hindsight",
+            "rocketride-server",
+            "hydradb"
+          ],
+          "verified": true
+        },
+        "huggingface": {
+          "username": "ChiruAI",
+          "profile_url": "https://huggingface.co/ChiruAI",
+          "verified": true
+        },
+        "kaggle": {
+          "username": "ChiruAI",
+          "profile_url": "https://www.kaggle.com",
+          "verified": true,
+          "notebooks_count": 6
+        }
+      },
+      "skills": [
+        "Python",
+        "React",
+        "TypeScript",
+        "FastAPI",
+        "PyTorch",
+        "Transformers"
+      ],
+      "bookmarked_repos": [
+        "repo-1",
+        "repo-5",
+        "king",
+        "-Nexus-AI",
+        "hindsight"
+      ],
+      "bookmarked_issues": [
+        "iss-101"
+      ],
+      "created_at": "2026-10-30T21:12:57Z"
+    },
+    {
+      "id": "usr_1793394908_4d7c7494",
+      "username": "AlexDev",
+      "display_name": "AlexDev",
+      "email": "alex@gitlaunch.ai",
+      "password_hash": "5e434c2f3d25a0ea70a5bc1eeb7a8b61:972f5ab3f40be158caa324e93e5621a3db6cd33848062adf5f587f0f631e95bd",
+      "avatar_initials": "AL",
+      "tier": "Tier 1 Contributor",
+      "bio": "Open-Source AI Enthusiast & Contributor",
+      "platforms": {
+        "github": {
+          "username": "alexdev",
+          "profile_url": "https://github.com/alexdev",
+          "verified": true
+        },
+        "huggingface": {
+          "username": "alex-hf",
+          "profile_url": "https://huggingface.co/alex-hf",
+          "verified": true
+        }
+      },
+      "skills": [
+        "Python",
+        "FastAPI",
+        "PyTorch"
+      ],
+      "bookmarked_repos": [
+        "repo-1",
+        "king"
+      ],
+      "bookmarked_issues": [
+        "iss-101"
+      ],
+      "created_at": "2026-10-30T21:15:08Z"
+    },
+    {
+      "id": "usr_1793395350_344c32da",
+      "username": "Contr_test_265",
+      "display_name": "Contr_test_265",
+      "email": "test_265@nst.edu",
+      "password_hash": "18f77100b58316a57f3573d118583d0c:e48136366968cd2f5e5a6e399c6ffde3434e7bcf0f47becce6aef81d569229c4",
+      "avatar_initials": "CO",
+      "tier": "Tier 1 Contributor",
+      "bio": "Open-Source AI Enthusiast & Contributor",
+      "platforms": {
+        "github": {
+          "username": "gh_test_265",
+          "profile_url": "https://github.com/gh_test_265",
+          "verified": true
+        },
+        "huggingface": {
+          "username": "ai-explorer",
+          "profile_url": "https://huggingface.co/ai-explorer",
+          "verified": true
+        },
+        "kaggle": {
+          "username": "kaggle-master",
+          "profile_url": "https://www.kaggle.com/kaggle-master",
+          "verified": true
+        }
+      },
+      "skills": [
+        "Python",
+        "FastAPI",
+        "React",
+        "TypeScript",
+        "LangChain"
+      ],
+      "bookmarked_repos": [
+        "repo-1",
+        "repo-5",
+        "king",
+        "hindsight"
+      ],
+      "bookmarked_issues": [
+        "iss-101",
+        "123"
+      ],
+      "created_at": "2026-10-30T21:22:30Z"
+    }
+  ]
+}
