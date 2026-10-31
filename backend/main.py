@@ -8,6 +8,7 @@ Includes Multi-Provider Live Harvester for any repo/model link or query!
 import os
 import json
 from typing import List, Optional, Dict, Any
+from fastapi.staticfiles import StaticFiles
 from fastapi import FastAPI, HTTPException, Query, Header, Request, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse, FileResponse, RedirectResponse
@@ -28,7 +29,7 @@ from universal_crawler import (
 )
 
 app = FastAPI(
-    title="GitLaunch - Unified Open-Source AI Hub",
+    title="GoSource - Unified Open-Source AI Hub",
     description="Aggregates open-source AI repositories across providers, tracks origin fetch URLs, and powers AI-guided contributions.",
     version="1.4.0"
 )
@@ -48,6 +49,12 @@ ISSUES_FILE = os.path.join(DATA_DIR, "seed_issues.json")
 REPOS_FILE = os.path.join(DATA_DIR, "repositories.json")
 ECOSYSTEM_FILE = os.path.join(DATA_DIR, "ecosystem_providers.json")
 FRONTEND_INDEX = os.path.join(BASE_DIR, "frontend", "index.html")
+GOSOURCE_DIST = os.path.join(BASE_DIR, "GoSource", "dist")
+if os.path.exists(GOSOURCE_DIST):
+    assets_dir = os.path.join(GOSOURCE_DIST, "assets")
+    if os.path.exists(assets_dir):
+        app.mount("/assets", StaticFiles(directory=assets_dir), name="assets")
+
 
 def load_issues() -> List[Dict[str, Any]]:
     if os.path.exists(ISSUES_FILE):
@@ -627,6 +634,6 @@ def serve_dashboard():
     """
 
 if __name__ == "__main__":
-    print("Starting GitLaunch Backend on http://127.0.0.1:8000 ...")
+    print("Starting GoSource Backend on http://127.0.0.1:8000 ...")
     uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)
 

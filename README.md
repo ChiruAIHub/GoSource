@@ -2,14 +2,14 @@
 
 > **Track 1:** Best Open-Source / Open-Weight AI Product  
 > **Core AI Engine:** OpenCode Nemotron 3.5 Super VL 120B (Open-Weight, Zero Cloud Quota Burn)  
-> **Live Website:** [https://right-midnight-ate-defense.trycloudflare.com](https://right-midnight-ate-defense.trycloudflare.com)  
+> **Live Website:** [https://charts-survivors-shipment-postcard.trycloudflare.com](https://charts-survivors-shipment-postcard.trycloudflare.com)  
 > **GitHub Repository:** [https://github.com/ChiruAIHub/GoSource](https://github.com/ChiruAIHub/GoSource)
 
 ---
 
 ## 🌐 Live Access & Deployment
-- 🚀 **Main Website (Live Demo):** [https://right-midnight-ate-defense.trycloudflare.com](https://right-midnight-ate-defense.trycloudflare.com)
-- 📚 **Interactive Swagger API Docs:** [https://right-midnight-ate-defense.trycloudflare.com/docs](https://right-midnight-ate-defense.trycloudflare.com/docs)
+- 🚀 **Main Website (Live Demo):** [https://charts-survivors-shipment-postcard.trycloudflare.com](https://charts-survivors-shipment-postcard.trycloudflare.com)
+- 📚 **Interactive Swagger API Docs:** [https://charts-survivors-shipment-postcard.trycloudflare.com/docs](https://charts-survivors-shipment-postcard.trycloudflare.com/docs)
 
 ---
 
@@ -26,7 +26,7 @@ Every repository and issue card prominently displays:
 
 ## 🔌 API Endpoints
 
-Interactive Swagger Docs: [https://right-midnight-ate-defense.trycloudflare.com/docs](https://right-midnight-ate-defense.trycloudflare.com/docs)
+Interactive Swagger Docs: [https://charts-survivors-shipment-postcard.trycloudflare.com/docs](https://charts-survivors-shipment-postcard.trycloudflare.com/docs)
 
 ### 1. `GET /api/repos` (All Aggregated Repositories in One Place)
 Returns all open-source repositories brought together from the different websites with their fetch link and direct redirect link.
@@ -53,7 +53,7 @@ Returns all open-source repositories brought together from the different website
 
 ### 2. `GET /api/redirect/{item_id}` (Direct Browser Redirection)
 Directly issues an `HTTP 307 Redirect` to take the user from GoSource straight to the original open-source site.
-- **Example**: `https://right-midnight-ate-defense.trycloudflare.com/api/redirect/iss-101` redirects directly to `https://github.com/BerriAI/litellm/issues/4512`.
+- **Example**: `https://charts-survivors-shipment-postcard.trycloudflare.com/api/redirect/iss-101` redirects directly to `https://github.com/BerriAI/litellm/issues/4512`.
 
 ### 3. `POST /api/issues/match` (Smart Contributor Matching)
 - **Request Body**:

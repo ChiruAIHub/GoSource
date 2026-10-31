@@ -1,7 +1,7 @@
 # GoSource: AI Open-Source Contribution Finder
 
 > **Track 1:** Best Open-Source / Open-Weight AI Product  
-> **Live Website:** https://right-midnight-ate-defense.trycloudflare.com
+> **Live Website:** https://charts-survivors-shipment-postcard.trycloudflare.com
 > **License:** MIT License  
 > **Core AI Models:** OpenCode Nemotron 3.5 Super VL 120B / DeepSeek
 
