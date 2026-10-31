@@ -1,8 +1,6 @@
 # GoSource: Unified Open-Source AI Repository & Contribution Hub
 
-> **Newton School of Technology (SMRU × MLH)**  
 > **Track 1:** Best Open-Source / Open-Weight AI Product  
-> **Problem Statement #20:** Open-Source Contribution Finder  
 > **Core AI Engine:** OpenCode Nemotron 3.5 Super VL 120B (Open-Weight, Zero Cloud Quota Burn)  
 > **Live Website:** [https://right-midnight-ate-defense.trycloudflare.com](https://right-midnight-ate-defense.trycloudflare.com)  
 > **GitHub Repository:** [https://github.com/ChiruAIHub/GoSource](https://github.com/ChiruAIHub/GoSource)
@@ -83,9 +81,7 @@ Returns complete category directory (Model Hubs, Inference APIs, Frameworks, Cre
 
 ## ⚖️ Open-Source Licensing & Compliance Declaration
 
-> Built for **Newton School of Technology (SMRU × MLH)**  
 > **Track 1:** Best Open-Source / Open-Weight AI Product  
-> **Problem Statement #20:** Open-Source Contribution Finder  
 
 This project implements a verified **Two-Layer Open-Source Architecture** in full compliance with official evaluation rules:
 

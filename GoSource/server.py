@@ -27,7 +27,7 @@ DIST_DIR = os.path.join(BASE_DIR, "dist")
 SAMPLE_DATA = {
     "status": "online",
     "service": "GoSource Engine v1.0",
-    "problem_statement": "Problem Statement 20: Open Source Finder",
+    "project_scope": "Open Source Discovery & Contribution Hub",
     "author": "ChiruAIHub",
     "api_version": "2026.1",
     "capabilities": [
@@ -135,4 +135,5 @@ def run():
 
 if __name__ == "__main__":
     run()
+
 

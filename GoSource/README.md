@@ -1,13 +1,12 @@
 # 🚀 GoSource — Open Source Discovery Platform & Launchpad
 
-> **Problem Statement 20**: Open Source Finder  
 > **Team / Creator**: ChiruAIHub  
 > **Live Demo URL**: [https://right-midnight-ate-defense.trycloudflare.com](https://right-midnight-ate-defense.trycloudflare.com)  
 > **GitHub Repository**: [https://github.com/ChiruAIHub/GoSource](https://github.com/ChiruAIHub/GoSource)
 
 ---
 
-## 🌟 Executive Vision & Problem Statement
+## 🌟 Executive Vision
 
 Millions of students, beginners, and aspiring developers want to contribute to open source, but face severe friction:
 1. **Repository Overwhelm**: Searching GitHub yields thousands of complex enterprise monorepos without clear beginner entry points.
