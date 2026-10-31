@@ -1,6 +1,6 @@
 """
-Universal Multi-Provider Open-Source Harvester & Crawler for GitLaunch
-Comprehensive support for ALL open-source providers from the Hackathon Taxonomy:
+Universal Multi-Provider Open-Source Harvester & Crawler for GoSource
+Comprehensive support for ALL open-source providers from the Open-Source Ecosystem Taxonomy:
 1. AI Model Hubs: GitHub, Hugging Face, ModelScope, Kaggle, Ollama Library, Civitai, OpenXLab, Gitee AI, NVIDIA NGC, Google AI Model Garden
 2. AI API Providers: Groq, Together AI, Fireworks AI, DeepInfra, OpenRouter, Replicate, Cerebras, SiliconFlow, Hyperbolic, Novita AI, Baseten, Modal, RunPod, Vast.ai, Nebius AI
 3. Open-Source AI Frameworks: LangChain, LlamaIndex, Dify, Flowise, n8n, AutoGen, CrewAI, Haystack, Ollama, Open WebUI, LiteLLM, AnythingLLM
@@ -1231,3 +1231,4 @@ def search_platform_catalog(query: str) -> List[Dict[str, Any]]:
                 "tags": [p["name"].lower(), "open-source", p["category"].lower()]
             })
     return matches
+

@@ -1,6 +1,6 @@
 # 🚀 GoSource — Open Source Discovery Platform & Launchpad
 
-> **Hackathon Problem Statement 20**: Open Source Finder  
+> **Problem Statement 20**: Open Source Finder  
 > **Team / Creator**: ChiruAIHub  
 > **Live Demo URL**: [https://right-midnight-ate-defense.trycloudflare.com](https://right-midnight-ate-defense.trycloudflare.com)  
 > **GitHub Repository**: [https://github.com/ChiruAIHub/GoSource](https://github.com/ChiruAIHub/GoSource)
@@ -94,3 +94,4 @@ npm run dev
 ```bash
 npm run build
 ```
+

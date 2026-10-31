@@ -70,12 +70,12 @@ await asyncTest("Server responds 200 on /api/health", async () => {
   assert.strictEqual(json.port, 5173);
 });
 
-await asyncTest("Server responds 200 on /api/status with hackathon payload", async () => {
+await asyncTest("Server responds 200 on /api/status with payload", async () => {
   const res = await fetchUrl("http://127.0.0.1:5173/api/status");
   assert.strictEqual(res.status, 200);
   const json = JSON.parse(res.body);
   assert.strictEqual(json.status, "online");
-  assert.strictEqual(json.hackathon_problem, "Problem Statement 20: Open Source Finder");
+  assert.strictEqual(json.problem_statement, "Problem Statement 20: Open Source Finder");
   assert.ok(Array.isArray(json.capabilities));
 });
 
@@ -338,3 +338,5 @@ if (passedTests === totalTests) {
   console.log("⚠️ SOME TESTS FAILED — CHECK ERRORS ABOVE.");
 }
 console.log("=================================================");
+
+

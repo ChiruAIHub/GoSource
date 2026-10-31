@@ -36,7 +36,7 @@ _load_env_file()
 
 DATA_DIR = os.path.join(BASE_DIR, "data")
 USERS_FILE = os.path.join(DATA_DIR, "users.json")
-SECRET_KEY = os.environ.get("GITLAUNCH_JWT_SECRET", "gitlaunch_hackathon_2026_super_secret_auth_key")
+SECRET_KEY = os.environ.get("GOSOURCE_JWT_SECRET", "gosource_auth_2026_super_secret_key")
 
 OTP_CODES: Dict[str, Dict[str, Any]] = {}
 
@@ -476,3 +476,4 @@ def verify_login_code(email: str, code: str) -> Dict[str, Any]:
             "token": token,
             "user": sanitize_user(user)
         }
+

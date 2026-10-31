@@ -199,12 +199,12 @@ def get_health():
     issues = load_issues()
     return {
         "status": "online",
-        "service": "GitLaunch Unified Open-Source Hub",
+        "service": "GoSource Unified Open-Source Hub",
         "ai_engine": "OpenCode Nemotron 3.5 Super VL 120B (Active)",
         "total_repositories": len(repos),
         "total_issues": len(issues),
         "source_platforms": ["GitHub", "Hugging Face", "Ollama Library", "ModelScope"],
-        "hackathon_track": "Track 1: Best Open-Source AI Product",
+        "project_track": "Track 1: Best Open-Source AI Product",
         "docs_url": "http://localhost:8000/docs",
         "web_ui": "http://localhost:8000/"
     }
@@ -570,7 +570,7 @@ def sync_contributor_preferences(req: SyncPreferencesRequest, authorization: Opt
 def github_oauth_login(username: Optional[str] = Query(None)):
     """
     1-Click GitHub login route. If client_id is not configured, provides seamless
-    1-click instant contributor login for hackathon presentation and testing.
+    1-click instant contributor login for live demonstration and testing.
     """
     target_username = (username or "contributor").strip().lstrip("@")
     clean_email = f"{target_username.lower()}@github.com"
@@ -629,3 +629,4 @@ def serve_dashboard():
 if __name__ == "__main__":
     print("Starting GitLaunch Backend on http://127.0.0.1:8000 ...")
     uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)
+

@@ -1,6 +1,6 @@
 param (
     [string]$TargetDrive = "D:",
-    [string]$ProjectName = "Hacktoberfest2026_GitLaunch"
+    [string]$ProjectName = "GoSource"
 )
 
 # Project root directory
@@ -58,3 +58,5 @@ Write-Host " - Synced Files: $fileCount files ($totalSizeMB MB)" -ForegroundColo
 Write-Host " - Target Folder: $destCurrent" -ForegroundColor Green
 Write-Host " - Snapshot Zip : $snapshotZip" -ForegroundColor Green
 Write-Host "==========================================================" -ForegroundColor Green
+
+

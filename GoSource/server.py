@@ -1,5 +1,5 @@
 """
-GoSource Production & Hackathon Demo Server
+GoSource Production & Demo Server
 Lightweight, zero-external-dependency Python HTTP server that:
 1. Serves the high-performance compiled React/Vite frontend (dist/)
 2. Serves the REST API endpoints for repositories, beginner issues, AI models, and datasets
@@ -26,8 +26,8 @@ DIST_DIR = os.path.join(BASE_DIR, "dist")
 
 SAMPLE_DATA = {
     "status": "online",
-    "service": "GoSource Hackathon Engine v1.0",
-    "hackathon_problem": "Problem Statement 20: Open Source Finder",
+    "service": "GoSource Engine v1.0",
+    "problem_statement": "Problem Statement 20: Open Source Finder",
     "author": "ChiruAIHub",
     "api_version": "2026.1",
     "capabilities": [
@@ -135,3 +135,4 @@ def run():
 
 if __name__ == "__main__":
     run()
+

@@ -2,15 +2,15 @@ import os
 import zipfile
 import datetime
 
-SNAPSHOTS_DIR = r"D:\Hacktoberfest2026_GitLaunch\snapshots"
+SNAPSHOTS_DIR = r"D:\GoSource\snapshots"
 os.makedirs(SNAPSHOTS_DIR, exist_ok=True)
 
 timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 zip_path = os.path.join(SNAPSHOTS_DIR, f"backup_full_project_{timestamp}.zip")
 
 SOURCES = [
-    (r"D:\Hacktoberfest2026_GitLaunch\current", "current"),
-    (r"D:\Hacktoberfest2026_GitLaunch\GoSource", "GoSource")
+    (r"D:\GoSource\current", "current"),
+    (r"D:\GoSource\GoSource", "GoSource")
 ]
 
 EXCLUDE_DIRS = {"node_modules", ".venv", "venv", "__pycache__", ".git"}
@@ -41,3 +41,5 @@ print(f"SUCCESS: Snapshot created successfully on Drive D!")
 print(f"File: {zip_path}")
 print(f"Total files archived: {total_files}")
 print(f"Archive size: {size_mb:.2f} MB")
+
+

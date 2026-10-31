@@ -29,7 +29,7 @@
     "category": "AI Agents",
     "language": "python",
     "stars": 28900,
-    "labels": ["good first issue", "bug", "hacktoberfest"],
+    "labels": ["good first issue", "bug", "help wanted"],
     "description": "When agents run with local Ollama models on a remote LAN server, the OllamaWorker defaults to localhost. Allow passing custom base_url in crewai/agents/cache.py.",
     "difficulty": "beginner",
     "estimated_time": "30 mins",
@@ -65,7 +65,7 @@
     "category": "AI Frontend",
     "language": "typescript",
     "stars": 65000,
-    "labels": ["good first issue", "ui", "hacktoberfest"],
+    "labels": ["good first issue", "ui", "help wanted"],
     "description": "In dark mode, the slider labels for temperature and top_p in the Model Parameters modal have insufficient contrast ratio. Update Tailwind color class in src/lib/components/Settings.svelte.",
     "difficulty": "beginner",
     "estimated_time": "20 mins",
@@ -180,3 +180,4 @@
     "issue_url": "https://github.com/microsoft/autogen/issues/3201"
   }
 ]
+

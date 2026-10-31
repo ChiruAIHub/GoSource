@@ -4,7 +4,8 @@ echo ======================================================================
 echo  PULL LATEST PROJECT FROM DRIVE D TO THIS LAPTOP
 echo ======================================================================
 set TARGET_DRIVE=%~d0
-set PROJECT_NAME=Hacktoberfest2026_GitLaunch
+set PROJECT_NAME=GoSource
+if not exist "%TARGET_DRIVE%\%PROJECT_NAME%" ( set PROJECT_NAME=GoSource )
 
 set "DEST_DIR=%USERPROFILE%\Desktop\gitlaunch-contribution-finder"
 if exist "%USERPROFILE%\.gemini\antigravity\scratch\gitlaunch-contribution-finder" (
@@ -19,3 +20,5 @@ powershell -ExecutionPolicy Bypass -Command "& { param($src, $dst) if (-not (Tes
 
 echo.
 pause
+
+

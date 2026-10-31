@@ -1,6 +1,6 @@
 """
-Comprehensive Multi-Provider Stress Test Suite for GitLaunch
-Tests 20 real links across all Open-Source Providers from the Hackathon Taxonomy:
+Comprehensive Multi-Provider Stress Test Suite for GoSource
+Tests 20 real links across all Open-Source Providers from the Open-Source Ecosystem Taxonomy:
 - GitHub
 - Hugging Face (Models & Datasets)
 - Ollama Library
@@ -84,7 +84,7 @@ def run_stress_test():
         api_endpoint = f"http://127.0.0.1:8000/api/repos?search={urllib.parse.quote(url)}"
 
         try:
-            req = urllib.request.Request(api_endpoint, headers={"User-Agent": "GitLaunch-StressRunner"})
+            req = urllib.request.Request(api_endpoint, headers={"User-Agent": "GoSource-StressRunner"})
             with urllib.request.urlopen(req, timeout=15) as resp:
                 data = json.loads(resp.read().decode("utf-8"))
                 repos = data.get("repositories", [])
@@ -126,3 +126,4 @@ def run_stress_test():
 if __name__ == "__main__":
     success = run_stress_test()
     sys.exit(0 if success else 1)
+

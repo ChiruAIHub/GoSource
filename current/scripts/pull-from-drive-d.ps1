@@ -5,7 +5,7 @@
 
 param (
     [string]$TargetDrive = "D:",
-    [string]$BackupDirName = "Hacktoberfest2026_GitLaunch"
+    [string]$BackupDirName = "GoSource"
 )
 
 $destDir = Split-Path -Parent $PSScriptRoot
@@ -41,3 +41,5 @@ $robocopyArgs = @(
 & robocopy.exe @robocopyArgs | Out-Null
 
 Write-Host "✅ Local laptop updated with latest files from Drive D!" -ForegroundColor Green
+
+

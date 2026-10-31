@@ -154,7 +154,7 @@ export default function HomeView({
               </h2>
             </div>
             <p className="text-xs text-slate-400">
-              Curated code, speech, and multimodal benchmark datasets ready for research and hackathon training.
+              Curated code, speech, and multimodal benchmark datasets ready for research and model training.
             </p>
           </div>
 
@@ -177,3 +177,4 @@ export default function HomeView({
     </div>
   );
 }
+
