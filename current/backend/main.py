@@ -245,35 +245,63 @@ def get_repositories(
         # Language filter
         if language and language.lower() not in r.get("language", "").lower():
             continue
-        # Local search query
+        # Local search query (word token & fuzzy match)
         if search:
-            q = search.lower()
+            q = search.lower().strip()
             text_corpus = f"{r.get('name', '')} {r.get('repo', '')} {r.get('description', '')} {r.get('fetch_source_url', '')} {' '.join(r.get('tags', []))}".lower()
-            if q not in text_corpus:
+            tokens = [tok for tok in q.split() if len(tok) > 1]
+            if tokens:
+                if not any(tok in text_corpus for tok in tokens):
+                    continue
+            elif q not in text_corpus:
                 continue
 
         matched_local.append(r)
         seen_repos.add(r.get("repo", "").lower())
 
-    # Live Multi-Provider Harvester for any URL, slug, or when local catalog needs supplementation
+    # Live Multi-Provider Harvester for ANY search keyword, URL, or repo slug
     live_results = []
     if search and len(search.strip()) >= 2:
-        search_str = search.strip().lower()
-        is_url_or_slug = any(x in search_str for x in ["http://", "https://", ".com", ".org", ".cn", ".edu", ".gov", "/"])
-        # Crawl immediately if it's a specific link/slug OR if local catalog has few matches
-        if is_url_or_slug or len(matched_local) < 3:
-            try:
-                live_hits = resolve_open_source_input(search.strip())
-                for hit in live_hits:
-                    repo_handle = hit.get("repo", "").lower()
-                    if repo_handle not in seen_repos:
-                        live_results.append(hit)
-                        seen_repos.add(repo_handle)
-                        save_repository(hit)  # Cache for future queries
-            except Exception:
-                pass
+        try:
+            live_hits = resolve_open_source_input(search.strip())
+            for hit in live_hits:
+                repo_handle = hit.get("repo", "").lower()
+                if repo_handle not in seen_repos:
+                    # Platform filter
+                    if platform and platform.lower() != "all" and platform.lower() not in hit.get("source_platform", "").lower():
+                        continue
+                    # Category filter
+                    if category and category.lower() not in hit.get("category", "").lower():
+                        continue
+                    # Language filter
+                    if language and language.lower() not in hit.get("language", "").lower():
+                        continue
+                    live_results.append(hit)
+                    seen_repos.add(repo_handle)
+                    save_repository(hit)  # Cache for future queries
+        except Exception:
+            pass
 
     combined = matched_local + live_results
+
+    # Sort combined by star count so the most popular and relevant repositories appear first
+    def get_sort_score(repo_item):
+        stars = repo_item.get("stars", 0)
+        if isinstance(stars, (int, float)):
+            return stars
+        if isinstance(stars, str):
+            try:
+                clean_s = stars.lower().replace(",", "").replace("+", "").strip()
+                if "k" in clean_s:
+                    return float(clean_s.replace("k", "")) * 1000
+                if "m" in clean_s:
+                    return float(clean_s.replace("m", "")) * 1000000
+                return float(clean_s)
+            except Exception:
+                return 0
+        return 0
+
+    combined.sort(key=get_sort_score, reverse=True)
 
     # Available distinct platforms & categories for UI filter chips
     distinct_platforms = sorted(list({r.get("source_platform") for r in combined if r.get("source_platform")}))

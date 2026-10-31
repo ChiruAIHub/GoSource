@@ -16,7 +16,30 @@ import urllib.parse
 import urllib.error
 from typing import List, Dict, Any, Optional
 
+import os
+import subprocess
+
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+
+GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
+if not GITHUB_TOKEN:
+    try:
+        gh_bin = r"C:\Program Files\GitHub CLI\gh.exe"
+        if os.path.exists(gh_bin):
+            res = subprocess.run([gh_bin, "auth", "token"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, timeout=2)
+            if res.returncode == 0 and res.stdout.strip():
+                GITHUB_TOKEN = res.stdout.strip()
+    except Exception:
+        pass
+
+def get_github_headers() -> Dict[str, str]:
+    headers = {
+        "User-Agent": USER_AGENT,
+        "Accept": "application/vnd.github.v3+json"
+    }
+    if GITHUB_TOKEN:
+        headers["Authorization"] = f"token {GITHUB_TOKEN}"
+    return headers
 
 def resolve_open_source_input(user_input: str) -> List[Dict[str, Any]]:
     """
@@ -160,16 +183,16 @@ def resolve_open_source_input(user_input: str) -> List[Dict[str, Any]]:
     combined = []
     seen = set()
 
-    # Search Hugging Face
-    hf_results = search_huggingface_models(clean, max_results=3)
-    for r in hf_results:
+    # Search GitHub (live top 25 high-authority repositories)
+    gh_results = search_github_repositories(clean, max_results=25)
+    for r in gh_results:
         key = r.get("repo", "").lower()
         if key not in seen:
             combined.append(r)
             seen.add(key)
 
-    # Search GitHub
-    gh_results = search_github_repositories(clean, max_results=4)
+    # Search Hugging Face (live top 15 models & datasets)
+    hf_results = search_huggingface_models(clean, max_results=15)
     for r in gh_results:
         key = r.get("repo", "").lower()
         if key not in seen:
@@ -278,7 +301,7 @@ def fetch_huggingface_space(space_id: str) -> Dict[str, Any]:
         "tags": ["huggingface", "space", "demo", "gradio"]
     }
 
-def search_huggingface_models(query: str, max_results: int = 4) -> List[Dict[str, Any]]:
+def search_huggingface_models(query: str, max_results: int = 15) -> List[Dict[str, Any]]:
     encoded = urllib.parse.quote(query)
     url = f"https://huggingface.co/api/models?search={encoded}&limit={max_results}&sort=likes&direction=-1"
     try:
@@ -1062,7 +1085,7 @@ def fetch_single_github_repo(repo_full_name: str) -> Optional[Dict[str, Any]]:
     
     # 1. Try public API
     try:
-        req = urllib.request.Request(api_url, headers={"User-Agent": USER_AGENT, "Accept": "application/vnd.github.v3+json"})
+        req = urllib.request.Request(api_url, headers=get_github_headers())
         with urllib.request.urlopen(req, timeout=4) as resp:
             if resp.status == 200:
                 item = json.loads(resp.read().decode("utf-8"))
@@ -1133,7 +1156,7 @@ def fetch_single_github_repo(repo_full_name: str) -> Optional[Dict[str, Any]]:
 
     return None
 
-def search_github_repositories(query: str, max_results: int = 4) -> List[Dict[str, Any]]:
+def search_github_repositories(query: str, max_results: int = 25) -> List[Dict[str, Any]]:
     clean_q = query.strip()
     if not clean_q:
         return []
@@ -1146,7 +1169,7 @@ def search_github_repositories(query: str, max_results: int = 4) -> List[Dict[st
     encoded_q = urllib.parse.quote(clean_q)
     url = f"https://api.github.com/search/repositories?q={encoded_q}&sort=stars&order=desc&per_page={max_results}"
     try:
-        req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept": "application/vnd.github.v3+json"})
+        req = urllib.request.Request(url, headers=get_github_headers())
         with urllib.request.urlopen(req, timeout=5) as resp:
             if resp.status == 200:
                 data = json.loads(resp.read().decode("utf-8"))
